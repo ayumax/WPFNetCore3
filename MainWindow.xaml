@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPFNetCore3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFNetCore3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ListBox ItemsSource="{Binding Items}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding Name}" Width="100" />
+                        <Button Content="..." Width="50" Command="{Binding SelectedCommand}"/>
+                    </StackPanel>
+                </DataTemplate>
+                
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </DockPanel>
+</Window>
